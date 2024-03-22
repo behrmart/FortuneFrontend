@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/bernardo/HTMLserver/FortuneFrontend/app/layout\":[\"static/media/370d1cc320ec5619-s.p.woff2\",\"static/media/7777133e901cd5ed-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
