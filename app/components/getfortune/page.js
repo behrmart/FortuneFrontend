@@ -10,6 +10,7 @@ import {
   Heading,
   Button,
   Text,
+  Box,
 } from "@chakra-ui/react";
 
 const Fortune = () => {
@@ -40,19 +41,21 @@ const Fortune = () => {
   };
 
   return (
-    <Card align="center">
-      <CardHeader>
-        <Heading size="md">{fortune && fortune.fortune_id}</Heading>
-      </CardHeader>
-      <CardBody>
-        <Text>{fortune && fortune.fortune_message}</Text>
-      </CardBody>
-      <CardFooter>
-        <Button colorScheme="blue" onClick={handleNewFortune}>
-          New Fortune
-        </Button>
-      </CardFooter>
-    </Card>
+    <Box p="6">
+      <Card align="center" p="6">
+        <CardHeader>
+          <Heading size="md">{fortune && fortune.fortune_id}</Heading>
+        </CardHeader>
+        <CardBody>
+          <Text>{fortune && fortune.fortune_message}</Text>
+        </CardBody>
+        <CardFooter>
+          <Button colorScheme="blue" onClick={handleNewFortune}>
+            New Fortune
+          </Button>
+        </CardFooter>
+      </Card>
+    </Box>
   );
 };
 
