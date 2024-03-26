@@ -23,7 +23,6 @@ export default function Wall() {
           <LeftNav />
         </GridItem>
         <GridItem pl="2" bg="green.100" area={"main"}>
-          <Main />
           <Fortune />
         </GridItem>
         <GridItem pl="2" bg="blue.100" area={"footer"}>
