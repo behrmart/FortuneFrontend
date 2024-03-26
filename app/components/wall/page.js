@@ -1,7 +1,9 @@
+"use client";
 import { Grid, GridItem } from "@chakra-ui/react";
 import LeftNav from "../leftnav/page";
 import Main from "../main/page";
 import Footer from "../footer/page";
+import Fortune from "../getfortune/page";
 
 export default function Wall() {
   return (
@@ -22,6 +24,7 @@ export default function Wall() {
         </GridItem>
         <GridItem pl="2" bg="green.100" area={"main"}>
           <Main />
+          <Fortune />
         </GridItem>
         <GridItem pl="2" bg="blue.100" area={"footer"}>
           <Footer />

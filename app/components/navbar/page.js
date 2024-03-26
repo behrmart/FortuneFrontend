@@ -1,6 +1,7 @@
 import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
 import { Flex, Spacer, Box, Button, Center } from "@chakra-ui/react";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 export default function Navbar() {
   return (
@@ -11,11 +12,12 @@ export default function Navbar() {
       color="white"
       borderRadius="md"
     >
-      <Center fontSize="lg">HobbitTalk</Center>
+      <Center fontSize="lg">Fortune Frontend</Center>
       <Spacer />
+      <ThemeSwitcher />
       <Button colorScheme="purple" variant="solid" size="sm">
         <Link as={NextLink} href="/dashboard">
-          Dashboard
+          Fortune Admin
         </Link>
       </Button>
     </Flex>

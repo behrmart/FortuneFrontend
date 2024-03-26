@@ -1,5 +1,5 @@
 // app/fonts.ts
-import { Poppins } from "next/font/google";
+/* import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
@@ -9,4 +9,4 @@ const poppins = Poppins({
 
 export const fonts = {
   poppins,
-};
+}; */

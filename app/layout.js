@@ -3,14 +3,14 @@ import { fonts } from "./fonts";
 import { Providers } from "./providers";
 
 export const metadata = {
-  title: "Hobbit Talk",
+  title: "Frontend Fortune App",
   description: "Simple App with Next.js",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={fonts.poppins.variable}>
-      <body>
+    <html lang="en">
+      <body suppressHydrationWarning={true}>
         <Providers>{children}</Providers>
       </body>
     </html>
