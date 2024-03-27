@@ -26,11 +26,16 @@ export default function Navbar() {
       color="white"
       borderRadius="md"
     >
-      <Center fontSize="lg">Fortune Frontend</Center>
+      <Center fontSize="lg">
+        <Button colorScheme="pink" variant="solid" size="sm">
+          <Link as={NextLink} href="/">
+            Fortune Frontend
+          </Link>
+        </Button>
+      </Center>
       <Spacer />
-
       <Button colorScheme="purple" variant="solid" size="sm">
-        <Link as={NextLink} href="/adminpage/page">
+        <Link as={NextLink} href="/adminpage">
           Fortune Admin
         </Link>
       </Button>

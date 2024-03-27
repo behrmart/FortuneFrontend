@@ -10,6 +10,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/layout.js"
     ],
+    "/adminpage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adminpage/page.js"
+    ],
     "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
