@@ -30,7 +30,7 @@ export default function Navbar() {
       <Spacer />
 
       <Button colorScheme="purple" variant="solid" size="sm">
-        <Link as={NextLink} href="/dashboard">
+        <Link as={NextLink} href="/adminpage/page">
           Fortune Admin
         </Link>
       </Button>

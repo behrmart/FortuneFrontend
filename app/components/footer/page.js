@@ -6,7 +6,7 @@ export default function Footer() {
       <Center fontSize="sm">
         Fortune Frontend for Fortune Vaquita Server on Docker MongoDB
       </Center>
-      <Center fontSize="sm" color="purple" p="3">
+      <Center fontSize="md" color="green" p="3">
         By Bernardo F. Martinez Meave DEV.F Kata DevOps 2024
       </Center>
     </Box>
