@@ -49,7 +49,6 @@ const Fortune = () => {
       <Card
         align="center"
         p="6"
-        p="6"
         w="100%"
         bgGradient={["linear(to-t, red.400, purple.700)"]}
       >
