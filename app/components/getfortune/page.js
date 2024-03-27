@@ -7,14 +7,16 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Heading,
+  Code,
   Button,
   Text,
+  Heading,
   Box,
 } from "@chakra-ui/react";
 
 const Fortune = () => {
   const [fortune, setFortune] = useState(null);
+  const [restat, setStat] = useState(null);
 
   const fetchData = async () => {
     try {
@@ -25,8 +27,10 @@ const Fortune = () => {
         }
       );
       const data = await response.json();
-      console.log(data);
+      const resStat = response.status;
+      console.log("data: ", data, "status: ", resStat);
       setFortune(data);
+      setStat(resStat);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -41,20 +45,46 @@ const Fortune = () => {
   };
 
   return (
-    <Box p="6">
-      <Card align="center" p="6">
+    <Box>
+      <Card
+        align="center"
+        p="6"
+        p="6"
+        w="100%"
+        bgGradient={["linear(to-t, red.400, purple.700)"]}
+      >
         <CardHeader>
-          <Heading size="md">{fortune && fortune.fortune_id}</Heading>
+          <Text size="md" color="pink">
+            Fortune No.: {fortune && fortune.fortune_id}
+          </Text>
         </CardHeader>
         <CardBody>
-          <Text>{fortune && fortune.fortune_message}</Text>
+          <Heading size="md" p="3">
+            {fortune && fortune.fortune_message}
+          </Heading>
         </CardBody>
         <CardFooter>
-          <Button colorScheme="blue" onClick={handleNewFortune}>
+          <Button colorScheme="purple" onClick={handleNewFortune}>
             New Fortune
           </Button>
         </CardFooter>
       </Card>
+
+      <Box borderWidth="1px" borderRadius="lg" p="10">
+        <Text p="3">
+          JSON response from Backend FortuneServer.js running on MongoDB Docker
+          Container:
+        </Text>
+        <Code p="6" colorScheme="green" borderWidth="1px" borderRadius="lg">
+          {JSON.stringify(fortune, null, 2)}
+        </Code>
+        <Text p="3">
+          HTTP response code:
+          <Code p="3" colorScheme="green" borderWidth="1px" borderRadius="lg">
+            {restat}
+          </Code>
+        </Text>
+      </Box>
     </Box>
   );
 };

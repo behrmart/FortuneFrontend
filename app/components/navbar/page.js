@@ -1,9 +1,23 @@
+"use client";
+import React, { useState } from "react";
 import NextLink from "next/link";
 import { Link } from "@chakra-ui/react";
-import { Flex, Spacer, Box, Button, Center } from "@chakra-ui/react";
-import { ThemeSwitcher } from "../ThemeSwitcher";
+import { Flex, Spacer, Button, Center, useColorMode } from "@chakra-ui/react";
 
 export default function Navbar() {
+  const [colorMode, setColorMode] = useState("light"); // Default color mode is light
+  const { toggleColorMode } = useColorMode();
+
+  const handleColorModeToggle = () => {
+    if (colorMode === "light") {
+      setColorMode("dark");
+      toggleColorMode();
+    } else {
+      setColorMode("light");
+      toggleColorMode();
+    }
+  };
+
   return (
     <Flex
       w="100%"
@@ -14,11 +28,21 @@ export default function Navbar() {
     >
       <Center fontSize="lg">Fortune Frontend</Center>
       <Spacer />
-      <ThemeSwitcher />
+
       <Button colorScheme="purple" variant="solid" size="sm">
         <Link as={NextLink} href="/dashboard">
           Fortune Admin
         </Link>
+      </Button>
+
+      <Button
+        ml={4}
+        colorScheme="purple"
+        variant="solid"
+        size="sm"
+        onClick={handleColorModeToggle}
+      >
+        {colorMode === "light" ? "Dark Mode" : "Light Mode"}
       </Button>
     </Flex>
   );
