@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Code, Flex, Spinner } from "@chakra-ui/react";
+import { Code, Flex, Spinner, Stack, Heading } from "@chakra-ui/react";
 import fetchFortunes from "../../../utils/fetchFortunes";
 
 const Fortunes = () => {
@@ -25,17 +25,25 @@ const Fortunes = () => {
   if (loading) {
     return (
       <Flex justify="center" align="center" h="200px">
-        <Spinner size="lg" />
+        <Spinner size="lg" color="purple.500" />
       </Flex>
     );
   }
 
   return (
     <Flex direction="column" align="start">
+      <Heading as="h3" size="md" p="2">
+        All Fortunes in MongoDB Server
+      </Heading>
       {fortunes.map((fortune, index) => (
-        <Code key={index} mb={2}>
-          {fortune.fortune_message}
-        </Code>
+        <>
+          <Stack direction="row">
+            <Code key={index} mb={2} colorScheme="purple">
+              {fortune.fortune_id}
+            </Code>
+            <Code colorScheme="green">{fortune.fortune_message}</Code>
+          </Stack>
+        </>
       ))}
     </Flex>
   );
