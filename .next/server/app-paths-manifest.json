@@ -1,4 +1,5 @@
 {
+  "/adminpage/page": "app/adminpage/page.js",
   "/page": "app/page.js",
-  "/adminpage/page": "app/adminpage/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
