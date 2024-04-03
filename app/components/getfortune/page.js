@@ -26,13 +26,14 @@ const Fortune = () => {
           method: "GET",
         }
       );
+
       const data = await response.json();
       const resStat = response.status;
-      console.log("data: ", data, "status: ", resStat);
+      console.log("JSON data: ", data, "Response code: ", resStat);
       setFortune(data);
       setStat(resStat);
     } catch (error) {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching data on getfortune:", error);
     }
   };
 

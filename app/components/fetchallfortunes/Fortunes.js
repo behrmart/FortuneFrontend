@@ -33,15 +33,30 @@ const Fortunes = () => {
   return (
     <Flex direction="column" align="start">
       <Heading as="h3" size="md" p="2">
-        All Fortunes in MongoDB Server
+        Dump all Fortunes in MongoDB Server
       </Heading>
+      <Code mb={2} colorScheme="orange">
+        MongoDB: _id, fortune_id, fotune_message, fortune_createdAt,
+        fortune_updatedAt
+      </Code>
       {fortunes.map((fortune, index) => (
         <>
-          <Stack direction="row">
-            <Code key={index} mb={2} colorScheme="purple">
+          <Stack direction="row" key={fortune._id}>
+            <Code mb={1} colorScheme="red">
+              {fortune._id}
+            </Code>
+            <Code mb={1} colorScheme="purple">
               {fortune.fortune_id}
             </Code>
-            <Code colorScheme="green">{fortune.fortune_message}</Code>
+            <Code mb={1} colorScheme="green">
+              {fortune.fortune_message}
+            </Code>
+            <Code mb={1} colorScheme="blue">
+              {fortune.createdAt}
+            </Code>
+            <Code mb={1} colorScheme="cyan">
+              {fortune.updatedAt}
+            </Code>
           </Stack>
         </>
       ))}

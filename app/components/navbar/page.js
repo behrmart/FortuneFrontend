@@ -29,14 +29,14 @@ export default function Navbar() {
       <Center fontSize="lg">
         <Button colorScheme="pink" variant="solid" size="sm">
           <Link as={NextLink} href="/">
-            Fortune Frontend
+            Random Fortune
           </Link>
         </Button>
       </Center>
       <Spacer />
       <Button colorScheme="purple" variant="solid" size="sm">
         <Link as={NextLink} href="/adminpage">
-          Fortune Admin
+          Dump Fortunes
         </Link>
       </Button>
 
