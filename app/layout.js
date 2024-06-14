@@ -2,7 +2,7 @@ import { Providers } from "./providers";
 
 export const metadata = {
   title: "Frontend Fortune App",
-  description: "Simple App with Next.js",
+  description: "Simple Fortune Server App with Next.js and Mongo DB Docker",
 };
 
 export default function RootLayout({ children }) {
